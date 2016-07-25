@@ -7,7 +7,7 @@
       RUN mkdir /etc/ansible/
       RUN echo "[local]" > /etc/ansible/hosts ; echo "localhost" >> /etc/ansible/hosts
       RUN mkdir /opt/ansible/ -p
-      RUN git clone git+http://github.com/ansible/ansible.git /opt/ansible/ansible
+      RUN git clone http://github.com/ansible/ansible.git /opt/ansible/ansible
       WORKDIR /opt/ansible/ansible
       RUN git checkout v2.1.0.0-1
       RUN git submodule update --init
